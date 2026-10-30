@@ -131,13 +131,13 @@ new Chart(document.getElementById('Chart'), {
     new Chart(ctx2,{
       type: 'doughnut',
       data: {labels: [
-        'Red',
-        'Blue',
-        'Yellow'
+        'Spotify',
+        'Apple Music',
+        'Youtube Music'
       ],
       datasets: [{
         label: 'My First Dataset',
-        data: [300, 50, 100],
+        data: [325, 100, 25],
         backgroundColor: [
           'rgb(60, 38, 79)',
           'rgb(42, 62, 97)',
@@ -153,7 +153,7 @@ new Chart(document.getElementById('Chart'), {
           },
           title: {
             display: true,
-            text: 'Chart.js Doughnut Chart'
+            text: 'Music Streaming Service Popularity'
           }
         }
       },
