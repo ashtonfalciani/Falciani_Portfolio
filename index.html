@@ -32,31 +32,22 @@
     <canvas id = "Chart2"></canvas>
   </div>
   <script>
- const labels = [
-  'Instagram',
-  'Facebook',
-  'TikTok',
-  'Snapchat'
-];
-
-const data = {
-  labels: labels,
-  datasets: [{
-    label: 'Social Media Popularity',
-    data: [85, 70, 65, 45],
-    backgroundColor: [
-      'rgba(214, 69, 204)',
-      'rgba(95, 42, 145)',
-      'rgba(69, 154, 214)',
-      'rgba(69, 45, 82)'
-    ],
-    borderWidth: 1
-  }]
-};
-
-const config = {
+new Chart(document.getElementById('Chart'), {
   type: 'bar',
-  data: data,
+  data: {
+    labels: ['Instagram', 'TikTok', 'Facebook', 'Snapchat'],
+    datasets: [{
+      label: 'Social Media Popularity',
+      data: [85, 70, 65, 45],
+      backgroundColor: [
+        'rgba(214, 69, 204)',
+        'rgba(94, 26, 76)',
+        'rgba(57, 102, 150)',
+        'rgba(69, 45, 82)'
+      ],
+      borderWidth: 1
+    }]
+  },
   options: {
     responsive: true,
     scales: {
@@ -66,9 +57,7 @@ const config = {
       }
     }
   }
-};
-
-new Chart(document.getElementById('Chart'), config);
+});
      const ctx2=document.getElementById("Chart2"); 
     new Chart(ctx2,{
       type: 'doughnut',
